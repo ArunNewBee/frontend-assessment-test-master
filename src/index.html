@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolidayPirates Frontend test</title>
+    <script src="https://kit.fontawesome.com/379a0feb60.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-center">
+        <a class="logo" href="#">
+          
+        </a>
+        <i class="fas fa-bars"></i>
+        <div class="navbar">
+          <i class="fas fa-times"></i>
+          <a href="#">Help</a>
+          <a href="#">Your Booking</a>
+          <a href="#">Create Account</a>
+          <a href="#">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="search-box">
+        <div class="search">
+          <h2>Search</h2>
+          <label class="lblText">Destination</label>
+          <input class="searchText" type="text" name="txtDestination" placeholder="Destination" id="" />
+          <label class="lblText">Check-in-date</label>
+          <input class="searchText" type="date" name="txtCheckin" placeholder="Check-in-date" id="">
+          <label class="lblText">Check-out-date</label>
+          <input class="searchText" type="date" name="txtCheckout" placeholder="Check-out-date" id="">
+          <select class="searchText" name="adult" id="">
+              <option>1 Adult</option>
+              <option selected>2 Adults</option>
+              <option>3 Adults</option>
+              <option>4 Adults</option>
+              <option>5 Adults</option>
+              <option>6 Adults</option>
+              <option>7 Adults</option>
+              <option>8 Adults</option>
+              <option>9 Adults</option>
+              <option>10 Adults</option>
+          </select>
+          <select class="searchText" name="children" id="">
+            <option selected>No children</option>
+            <option>1 Child</option>
+            <option>2 Children</option>
+            <option>3 Children</option>
+            <option>4 Children</option>
+            <option>5 Children</option>
+            <option>6 Children</option>
+            <option>7 Children</option>
+            <option>8 Children</option>
+            <option>9 Children</option>
+            <option>10 Children</option>
+          </select>
+          <select class="searchText" name="rooms" id="">
+              <option>1 Room</option>
+              <option>2 Rooms</option>
+              <option>3 Rooms</option>
+              <option>4 Rooms</option>
+              <option>5 Rooms</option>
+              <option>6 Rooms</option>
+              <option>7 Rooms</option>
+              <option>8 Rooms</option>
+              <option>9 Rooms</option>
+              <option>10 Rooms</option>
+          </select>
+          <input class="searchBtn" type="button" value="Search">
+        </div>
+      </div>
+      <div class="items-box">
+        <p class="listTop">Loading...</p>
+
+        <div class="filter">
+            <div class="subFilter star">Star</div>
+            <div class="subFilter priceLow">Price low to high</div>
+            <div class="subFilter priceHigh">Price high to low</div>
+        </div>
+        <div class="itemHolder">
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

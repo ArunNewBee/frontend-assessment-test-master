@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap');
+
+$font-family: 'Montserrat', sans-serif;
+$primary-bgColor: rgb(255,0,133);
+$secondary-bgColor: rgb(94,35,220);
+$colorSearch: rgb(94,35,220);
+$colorMain: rgb(255,0,133);
+$colorWhite: #fff;
+$borderSearch: rgb(218,217,217);
+$logo: url(../images/logo.png);
+
+body {
+  font-family: $font-family;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  position: sticky;
+  height: 50px;
+  z-index: 1;
+  background-color: $secondary-bgColor;
+  border-top: 5px solid $primary-bgColor;
+  
+  .header-center {
+    display: flex;
+    width: calc(100% - 10px);
+    height: 100%;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .logo {
+      width: 120px;
+      height: 32px;
+      background: $logo center center no-repeat;
+    }
+    .fa-bars {
+      display: none;
+    }
+    .navbar {
+      display: flex;
+      height: 100%;
+      .fa-times {
+        display: none;
+      }
+      a{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        color: $colorWhite;
+        text-decoration: none;
+        
+        &:hover {
+          background-color: rgba(255,255,255,0.1);  
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: calc(100% - 10px);
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 0 auto;
+
+  .search-box {
+    width: 30%;
+    
+    .search {
+      display: flex;
+      flex-direction: column;
+      background-color:rgb(242, 242, 242);
+      padding: 2rem;
+      border: 1px solid $borderSearch;
+
+      h2{
+        font-weight: 200;
+        font-size: 1.5rem;
+        color: $colorSearch;
+        margin-top: 0;
+      }
+
+      .lblText{
+        display: block;
+      }
+      .searchText{
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid $borderSearch;
+        color: $borderSearch;
+      }
+
+      .searchBtn{
+        background-color: $secondary-bgColor;
+        text-transform: uppercase;
+        color: $colorWhite;
+        border: none;
+        border-top: 3px solid $primary-bgColor;
+        border-radius: 5px;
+        padding: 1rem 1.5rem;
+        margin-top: 8px;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .items-box {
+    width: 68%;
+
+    .listTop{
+      font-weight: 200;
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+
+    .filter {
+      display: flex;
+      border-top: 3px solid $primary-bgColor;
+
+      .filterSelect{
+        background-color: $secondary-bgColor;
+        color: $colorWhite;
+      }
+      .subFilter {
+        flex: 1;
+        font-weight: 500;
+        border: 1px solid rgb(231,231,231);
+        border-top: none;
+        text-align: center;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        cursor: pointer;
+
+        &:nth-child(2) {
+          border-left: none;
+          border-right: none; 
+        }
+
+        &:focus {
+          background-color: $secondary-bgColor;
+        }
+      }
+    }
+
+    .itemHolder {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+    .item {
+      display: flex;
+      border: 1px solid rgb(231,231,231);
+      padding: 3px;
+      margin-bottom: 1rem;
+
+      .imageHolder {
+        flex: 2;
+        img{
+          width: 100%;
+        }
+      }
+      .detail {
+        flex: 3;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        h2 {
+          margin-top: 0.5rem;
+          margin-bottom: 0;
+          text-transform: capitalize;
+        }
+        .place {
+          margin-bottom: 0.5rem;
+        }
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      .rate {
+        flex: 1;
+        position: relative;
+
+        .star {
+          text-align: right;
+          margin-bottom: 12px;
+
+      
+          .fas.fa-star, .far.fa-star {
+            color: $colorMain;
+          }
+        }
+
+        .price {
+          font-weight: 900;
+          font-size: 1.2rem;
+          color: $colorSearch;
+          text-align: right;
+          margin-bottom: 12px;
+
+        }
+        
+      .review {
+        text-align: right;
+        span {
+          background-color: $primary-bgColor;
+          padding: 3px;
+          border-radius: 3px;
+          color: $colorWhite;
+        }
+      }
+
+        .bookNow {
+          display: block;
+          position: absolute;
+          width: 100%;
+          padding: 0.5rem 0;
+          bottom: 0;
+          background-color: $secondary-bgColor;
+          color: $colorWhite;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 960px) {
+  header {
+    .header-center {
+      .fa-bars {
+        display: unset;
+        color: $colorWhite;
+        font-size: 1rem;
+      }
+      .navbar {
+        display: none;
+      }
+      &.headerEnhance{
+        display: unset;
+        width: 100%;
+
+        .fa-bars {
+          display: none;
+        }
+        .navbar {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          height: 100vh;
+          background-color: $primary-bgColor;
+
+          .fa-times{
+            display: unset;
+            font-size: 1.6rem;
+            color: $colorWhite;
+            margin-left: 0.5rem;
+          }
+          a {
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            &:last-child {
+              margin-bottom: 2rem;
+            }
+          }
+        }        
+      }
+    }
+  }
+
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  .container {
+    flex-direction: column;
+    .search-box {
+      display: none;
+    }
+    .items-box{
+      width: 100%;
+
+      .item {
+        flex-direction: column;
+        .discription {
+          display: none;
+        }
+        .rate {
+          .bookNow {
+            position: unset;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
